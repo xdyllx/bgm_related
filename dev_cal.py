@@ -49,8 +49,7 @@ def cal_one_dev(bgm_id):
     return dev
 
 
-def cal_all_dev():
-    page = 2
+def cal_all_dev(page):
     anime_list = []
     for i in range(page):
         url = base_url + 'anime/browser?sort=rank&page=%d' % (i+1)
@@ -68,4 +67,4 @@ def cal_all_dev():
 
 if __name__ == '__main__':
     # cal_one_dev('876')
-    cal_all_dev()
+    cal_all_dev(2)
